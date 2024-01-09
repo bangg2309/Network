@@ -1,0 +1,7 @@
+package server;
+
+public class DAO {
+	private void openConnection() {
+		
+	}
+}
