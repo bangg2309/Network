@@ -1,0 +1,33 @@
+package server;
+
+public class Candidate {
+	private int id;
+	private String name;
+	private String birth;
+	private String address;
+
+	public Candidate(int id, String name, String birth, String address) {
+		this.id = id;
+		this.name = name;
+		this.birth = birth;
+		this.address = address;
+	}
+
+	public Candidate() {
+		
+	}
+	
+
+	public Candidate(String name, String birth, String address) {
+		super();
+		this.name = name;
+		this.birth = birth;
+		this.address = address;
+	}
+
+	@Override
+	public String toString() {
+		return "Candidate id=" + id + ", name=" + name + ", birth=" + birth + ", address=" + address;
+	}
+
+}

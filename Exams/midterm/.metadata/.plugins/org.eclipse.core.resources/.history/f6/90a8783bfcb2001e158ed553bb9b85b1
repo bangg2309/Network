@@ -1,0 +1,28 @@
+package exam14;
+
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.StringTokenizer;
+
+public class StudentManagement {
+	public static List<Student> loadData(String fileStudent, String fileGrade) throws IOException {
+		List<Student> students = new ArrayList<>();
+		BufferedReader readerStudent = new BufferedReader(new InputStreamReader(new FileInputStream(fileStudent), "UTF-8"));
+		
+		int id;
+		String name;
+		int age;
+		String lineStudent;
+		Student student = null;
+		while ((lineStudent = readerStudent.readLine())!=null) {
+			StringTokenizer stStudent = new StringTokenizer(lineStudent, "\t");
+			student.setId(Integer.parseInt(stStudent.nextToken()));
+		}
+		
+		return null;
+	}
+}

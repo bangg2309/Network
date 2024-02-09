@@ -1,0 +1,51 @@
+package client;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.Socket;
+
+public class ClientProcess {
+	private Socket socket;
+	private BufferedReader netIn;
+	private PrintWriter netOut;
+
+	public ClientProcess(Socket socket) throws IOException {
+		super();
+		this.socket = socket;
+		this.netIn = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+		this.netOut = new PrintWriter(socket.getOutputStream(), true);
+	}
+
+	public void run() throws IOException {
+		System.out.println(netIn.readLine());
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+		while (true) {
+			String command = reader.readLine();
+			String commandName = st.nextToken();
+			switch (commandName) {
+			case "SET_FOLDER":
+
+				break;
+			case "VIEW":
+
+				break;
+			case "COPY":
+
+				break;
+			case "MOVE":
+
+				break;
+			case "RENAME":
+
+				break;
+
+			default:
+				netOut.println("Command khong hop le");
+				break;
+			}
+			
+		}
+	}
+}

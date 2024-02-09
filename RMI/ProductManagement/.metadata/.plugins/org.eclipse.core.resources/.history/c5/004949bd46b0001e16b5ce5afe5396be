@@ -1,0 +1,17 @@
+package server;
+
+public class Product {
+	private int idsp;
+	private String name;
+	private int count;
+	private double price;
+
+	public Product(int idsp, String name, int count, double price) {
+		super();
+		this.idsp = idsp;
+		this.name = name;
+		this.count = count;
+		this.price = price;
+	}
+
+}

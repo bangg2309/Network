@@ -1,0 +1,14 @@
+package server;
+
+public class Service {
+	private DAO dao;
+
+	public Service() {
+		this.dao = new DAO();
+	}
+	
+	public void addProduct(Product product) {
+		dao.addProduct(product);
+	}
+
+}

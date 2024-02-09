@@ -1,0 +1,10 @@
+package exam12;
+
+import java.util.List;
+
+public class StudentManagement {
+	
+	public void readToFile(String pathFile, List<Student> students) {
+		
+	}
+}

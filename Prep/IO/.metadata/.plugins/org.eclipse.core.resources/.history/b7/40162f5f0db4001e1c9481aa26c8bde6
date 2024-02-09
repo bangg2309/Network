@@ -1,0 +1,28 @@
+package split;
+
+import java.io.File;
+
+public class SplitAndJoin {
+	
+	private static String makeFileName(String fileName,int order) {
+		
+		
+	}
+
+	public static void splitFile(String sFile, int size) {
+		File file = new File(sFile);
+		int order;
+		String childFile = file.getAbsolutePath();
+		do {
+			
+		} while (true);
+	}
+
+	public static void joinFile() {
+
+	}
+
+	public static void main(String[] args) {
+
+	}
+}

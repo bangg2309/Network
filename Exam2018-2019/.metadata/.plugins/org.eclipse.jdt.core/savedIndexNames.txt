@@ -1,8 +1,0 @@
-INDEX VERSION 1.131+D:\Project\Network\Exam2018-2019\.metadata\.plugins\org.eclipse.jdt.core
-1873795191.index
-1280393596.index
-1865797976.index
-2884103653.index
-1403846510.index
-1692222198.index
-2653387017.index

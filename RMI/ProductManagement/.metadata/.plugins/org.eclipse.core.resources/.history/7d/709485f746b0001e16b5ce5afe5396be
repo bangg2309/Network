@@ -1,0 +1,21 @@
+package server;
+
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
+
+public class ProductManagementImpl extends UnicastRemoteObject implements IProductManagement {
+	@Override
+	public void addProduct(Product product) throws RemoteException {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public boolean checkUsername(String username) throws RemoteException {
+		// TODO Auto-generated method stub
+		return false;
+	}@Override
+	public boolean login(String username, String password) throws RemoteException {
+		// TODO Auto-generated method stub
+		return false;
+	}
+}

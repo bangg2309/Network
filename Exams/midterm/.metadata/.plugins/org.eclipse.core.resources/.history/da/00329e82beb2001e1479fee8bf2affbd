@@ -1,0 +1,30 @@
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+
+public class SplitAndJoinFile {
+
+	private String makeDestFileName(String sourceFile, int order) {
+		String ext;
+		if (order < 10) {
+			ext = ".00" + order;
+		} else if (order < 100) {
+			ext = ".0" + order;
+		} else {
+			ext = "." + order;
+		}
+		return sourceFile + order;
+	}
+
+	public void splitFile(String sourceFile, int size) throws FileNotFoundException {
+		FileInputStream fis = new FileInputStream(sourceFile);
+		String destFile;
+		FileOutputStream fos;
+		int order = 0;
+		for (int i = 0; i < size; i++) {
+			destFile = makeDestFileName(sourceFile, order);
+			order++;
+			fos = new FileOutputStream(destFile);
+		}
+	}
+}

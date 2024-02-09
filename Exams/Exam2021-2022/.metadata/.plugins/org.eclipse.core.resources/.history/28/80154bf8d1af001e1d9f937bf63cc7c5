@@ -1,0 +1,8 @@
+package server;
+
+import java.io.RandomAccessFile;
+
+public class Service {
+	private RandomAccessFile raf;
+	private static final URL = "D:\\Project\\Network\\Exams\\Exam2021-2022\\RAF\\DATA\\thisinh.dat";
+}

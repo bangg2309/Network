@@ -1,0 +1,10 @@
+package server;
+
+import java.net.ServerSocket;
+
+public class Server {
+	public static final in PORT = "5555";
+	private void startServer() {
+		ServerSocket serverSocket = new ServerSocket(0)
+	}
+}

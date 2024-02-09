@@ -1,0 +1,19 @@
+package exam11;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class StudentManagement {
+	private List<Student> students;
+
+	public StudentManagement() {
+		this.students = new ArrayList<>();
+		List<Subject> subjects = new ArrayList<>();
+		Subject s1 = new Subject("Toan", 10);
+		Subject s2 = new Subject("Van", 9.5);
+		subjects.add(s1);
+		subjects.add(s2);
+		Student st1 = new Student("Nguyen Van A", 1, subjects);
+	}
+
+}

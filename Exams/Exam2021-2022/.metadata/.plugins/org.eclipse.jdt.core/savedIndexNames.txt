@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+D:\Project\Network\Exams\Exam2021-2022\.metadata\.plugins\org.eclipse.jdt.core
+3111784249.index
+1865797976.index
+1692222198.index

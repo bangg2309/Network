@@ -1,0 +1,13 @@
+package exam11;
+
+import java.util.List;
+
+public class StudentManagement {
+	private List<Student> students;
+
+	public StudentManagement(List<Student> students) {
+		super();
+		this.students = students;
+	}
+	
+}

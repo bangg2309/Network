@@ -1,0 +1,62 @@
+package server;
+
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.net.Socket;
+
+public class FileServerProcess extends Thread {
+	private Socket socket;
+	private String type;
+	private DataInputStream dis;
+	private DataOutputStream dos;
+
+	public FileServerProcess(Socket socket, String type) throws IOException {
+		this.socket = socket;
+		this.type = type;
+		this.dis = new DataInputStream(socket.getInputStream());
+		this.dos = new DataOutputStream(socket.getOutputStream());
+	}
+
+	@Override
+	public void run() {
+
+		switch (type) {
+		case "RECEIVE":
+			receiveFile();
+			break;
+		case "SEND":
+			break;
+		default:
+			break;
+		}
+	}
+
+	private void receiveFile() {
+		System.out.println("PORT: " + Server.FILE_PORT + " has opened");
+		String dest;
+		try {
+			dest = dis.readUTF();
+			Long length = dis.readLong();
+			FileOutputStream fos = new FileOutputStream(dest);
+
+			int offset;
+			long byteRead = 0;
+			byte[] buff = new byte[1024];
+			while (byteRead < length) {
+				offset = dis.read(buff);
+				fos.write(buff, 0, offset);
+				byteRead += offset;
+			}
+			dos.writeUTF("upload success");
+			fos.close();
+			System.out.println("PORT: " + Server.FILE_PORT + " has closed");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+}

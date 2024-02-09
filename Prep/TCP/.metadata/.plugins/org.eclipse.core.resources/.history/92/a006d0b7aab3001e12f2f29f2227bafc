@@ -1,0 +1,32 @@
+package server;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class DAO {
+	private Connection connection;
+	public static final String DRIVER = "net.ucanaccess.jdbc.UcanaccessDriver";
+	public static final String URL = "jdbc:ucanacess://";
+
+	private void openConnection() throws ClassNotFoundException, SQLException {
+		Class.forName(DRIVER);
+		this.connection = DriverManager.getConnection(URL);
+	}
+
+	public void addProduct(Product product) throws ClassNotFoundException, SQLException {
+		openConnection();
+		String sql = "INSERT INTO sanpham (idsp,name,count,price) VALUES(?,?,?,?)";
+		PreparedStatement stmt = connection.prepareStatement(sql);
+		stmt.setObject(1, product.getIdsp());
+		stmt.setObject(2, product.getName());
+		stmt.setObject(3, product.getCount());
+		stmt.setObject(4, product.getPrice());
+		stmt.executeUpdate();
+		
+		stmt.close();
+		connection.close();
+	}
+
+}

@@ -1,0 +1,13 @@
+package exam11;
+
+public class Subject {
+	private String name;
+	private double score;
+
+	public Subject(String name, double score) {
+		super();
+		this.name = name;
+		this.score = score;
+	}
+
+}

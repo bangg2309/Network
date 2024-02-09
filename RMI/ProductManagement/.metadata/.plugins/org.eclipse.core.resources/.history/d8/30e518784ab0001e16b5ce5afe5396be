@@ -1,0 +1,40 @@
+package server;
+
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
+import java.sql.SQLException;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.UUID;
+
+public class ProductManagementImpl extends UnicastRemoteObject implements IProductManagement {
+
+	private Service service;
+	private Set<String> session;
+
+	protected ProductManagementImpl() throws RemoteException {
+		this.service = new Service();
+		this.session = new HashSet<>();
+	}
+
+	@Override
+	public boolean checkUsername(String username) throws RemoteException, ClassNotFoundException, SQLException {
+		return service.checkUsername(username);
+	}
+
+	@Override
+	public String login(String username, String password) throws RemoteException, ClassNotFoundException, SQLException {
+		if (service.login(username, password)) {
+			String sessionId = UUID.randomUUID().toString();
+			session.add(sessionId);
+			return sessionId;
+		}
+		return null;
+	}
+
+	@Override
+	public void addProduct(Product product) throws RemoteException {
+		// TODO Auto-generated method stub
+
+	}
+}

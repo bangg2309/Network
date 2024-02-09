@@ -1,0 +1,16 @@
+package server;
+
+import java.sql.SQLException;
+
+public class Service {
+	private DAO dao;
+
+	public Service() {
+		this.dao = new DAO();
+	}
+
+	public void addProduct(Product product) throws ClassNotFoundException, SQLException {
+		dao.addProduct(product);
+	}
+
+}

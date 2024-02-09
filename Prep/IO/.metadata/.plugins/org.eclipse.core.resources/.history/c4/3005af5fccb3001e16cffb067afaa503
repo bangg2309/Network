@@ -1,0 +1,19 @@
+package raf;
+
+public class Candidate {
+	private int id;
+	private String name;
+	private String birth;
+	private String address;
+	private int sizeImage;
+
+	public Candidate(int id, String name, String birth, String address, int sizeImage) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.birth = birth;
+		this.address = address;
+		this.sizeImage = sizeImage;
+	}
+
+}

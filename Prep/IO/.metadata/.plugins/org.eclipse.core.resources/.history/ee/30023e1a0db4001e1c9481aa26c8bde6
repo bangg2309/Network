@@ -1,0 +1,19 @@
+package split;
+
+import java.io.File;
+
+public class SplitAndJoin {
+
+	public static void splitFile(String sFile, int size) {
+		File file = new File(sFile);
+		
+	}
+
+	public static void joinFile() {
+
+	}
+
+	public static void main(String[] args) {
+
+	}
+}

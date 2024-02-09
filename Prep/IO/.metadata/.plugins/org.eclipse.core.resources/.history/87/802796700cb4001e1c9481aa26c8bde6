@@ -1,0 +1,13 @@
+package split;
+
+public class SplitAndJoin {
+
+	public static void splitFile() {
+		
+	}
+	
+
+	public static void main(String[] args) {
+
+	}
+}

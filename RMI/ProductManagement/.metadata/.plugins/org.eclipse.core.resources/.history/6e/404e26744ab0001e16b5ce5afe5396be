@@ -1,0 +1,15 @@
+package server;
+
+import java.rmi.Remote;
+import java.rmi.RemoteException;
+import java.sql.SQLException;
+
+public interface IProductManagement extends Remote {
+
+	boolean checkUsername(String username) throws RemoteException, ClassNotFoundException, SQLException;
+
+	String login(String username, String password) throws RemoteException, ClassNotFoundException, SQLException;
+
+	void addProduct(Product product) throws RemoteException;
+
+}

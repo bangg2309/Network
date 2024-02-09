@@ -1,0 +1,8 @@
+package split;
+
+public class SplitAndJoin {
+	
+	public void splitFile() {
+		
+	}
+}

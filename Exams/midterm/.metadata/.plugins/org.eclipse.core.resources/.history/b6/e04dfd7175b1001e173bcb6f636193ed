@@ -1,0 +1,18 @@
+package exam11;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Student {
+	private String name;
+	private int id;
+	private List<Subject> subject = new ArrayList<>();
+
+	public Student(String name, int id, List<Subject> subject) {
+		super();
+		this.name = name;
+		this.id = id;
+		this.subject = subject;
+	}
+
+}

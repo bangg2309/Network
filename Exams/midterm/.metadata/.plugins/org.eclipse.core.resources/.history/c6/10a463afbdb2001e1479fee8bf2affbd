@@ -1,0 +1,7 @@
+
+public class SplitAndJoinFile {
+	
+	public void splitFile(String sourceFile, String destPath, int size) {
+		
+	}
+}
