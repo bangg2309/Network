@@ -1,6 +1,0 @@
-INDEX VERSION 1.131+D:\Project\Network\Exams\midterm\.metadata\.plugins\org.eclipse.jdt.core
-3791365767.index
-1692222198.index
-2757534238.index
-630089138.index
-1865797976.index

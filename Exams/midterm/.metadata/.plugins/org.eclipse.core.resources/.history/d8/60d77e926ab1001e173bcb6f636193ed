@@ -1,7 +1,0 @@
-package zip;
-
-public class Zip {
-	public static boolean pack(String sFolder, String dFile) {
-
-	}
-}

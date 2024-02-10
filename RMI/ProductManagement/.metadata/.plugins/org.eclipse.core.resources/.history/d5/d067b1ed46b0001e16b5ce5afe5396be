@@ -1,7 +1,0 @@
-package server;
-
-import java.rmi.server.UnicastRemoteObject;
-
-public class ProductManagementImpl extends UnicastRemoteObject implements IProductManagement {
-
-}

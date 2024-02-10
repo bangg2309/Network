@@ -1,8 +1,0 @@
-package exam11;
-
-import java.util.List;
-
-public class StudentManagement {
-	private List<Student>;
-	
-}

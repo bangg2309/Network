@@ -1,9 +1,0 @@
-package raf;
-
-public class Candidate {
-	private int id;
-	private String name;
-	private String birth;
-	private String address;
-	private int sizeImage;
-}

@@ -1,9 +1,0 @@
-package exam12;
-
-import java.util.List;
-
-public class Exam12 {
-	private void writeToFile(String pathFile, List<Student> students) {
-
-	}
-}

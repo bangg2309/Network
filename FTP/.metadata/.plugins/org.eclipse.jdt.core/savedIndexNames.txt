@@ -1,4 +1,0 @@
-INDEX VERSION 1.131+D:\Project\Network\FTP\.metadata\.plugins\org.eclipse.jdt.core
-1692222198.index
-1865797976.index
-1630820304.index

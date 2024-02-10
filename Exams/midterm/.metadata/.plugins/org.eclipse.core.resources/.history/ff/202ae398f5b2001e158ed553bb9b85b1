@@ -1,7 +1,0 @@
-package exam13;
-
-public class Exam {
-	public int getNum(String pathFile) {
-
-	}
-}
